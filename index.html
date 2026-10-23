@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mystery Room — Unreliable Reality</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="game">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">✧ A PSYCHOLOGICAL MYSTERY ✧</p>
+        <h1>The Mystery Room <span>♡</span></h1>
+      </div>
+      <div class="time-card">
+        <span>THE ROOM IS STUCK</span>
+        <strong>11:47 PM</strong>
+        <small>October 1997</small>
+      </div>
+    </header>
+ 
+    <section class="game-layout">
+      <div class="room-wrap">
+        <div class="room">
+          <div class="wall" aria-label="A nostalgic bedroom at night">
+            <!-- Invisible hotspots sit over the objects in the background artwork. -->
+            <button class="object hotspot diary" data-object="diary" aria-label="Inspect the diary" title="Inspect diary"></button>
+            <button class="object hotspot mirror" data-object="mirror" aria-label="Inspect the mirror" title="Inspect mirror"></button>
+            <button class="object hotspot computer" data-object="computer" aria-label="Inspect the computer" title="Inspect computer"></button>
+            <button class="object hotspot clock" data-object="clock" aria-label="Inspect the bedside clock" title="Inspect bedside clock"></button>
+            <button class="object hotspot door" data-object="door" aria-label="Inspect the exit door" title="Inspect exit"></button>
+          </div>
+        </div>
+        <p class="room-tip">✧ Compare the evidence. The room does not tell the whole truth. ✧</p>
+      </div>
+ 
+      <aside class="side-panel">
+        <section class="panel-card story-card">
+          <div class="panel-heading">
+            <span class="heading-icon">💌</span>
+            <h2>Your Story</h2>
+          </div>
+          <p id="story-text">
+            You wake in a bedroom that feels familiar, though you cannot remember arriving. The clock reads 11:47 PM. The door is locked. Something in this room has been changed.
+          </p>
+          <div class="mission">
+            <span>✧ CURRENT MISSION</span>
+            <p id="mission-text">Investigate the diary and the mirror. Nothing in this room is guaranteed to be reliable.</p>
+          </div>
+        </section>
+ 
+        <section class="panel-card">
+          <div class="panel-heading">
+            <span class="heading-icon">🎀</span>
+            <h2>Evidence Bag</h2>
+          </div>
+          <div id="inventory" class="inventory">
+            <p class="empty-inventory">Nothing collected yet...</p>
+          </div>
+        </section>
+ 
+        <section class="panel-card journal-card">
+          <div class="panel-heading">
+            <span class="heading-icon">📓</span>
+            <h2>Evidence Journal</h2>
+          </div>
+          <div id="journal">
+            <p class="journal-empty">Your discoveries will appear here.</p>
+          </div>
+        </section>
+ 
+        <div class="save-note">♡ take your time, detective ♡</div>
+      </aside>
+    </section>
+ 
+    <footer>MADE WITH LOVE, GLITTER & A LITTLE MYSTERY ✧ 1997</footer>
+  </main>
+ 
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="close-modal" class="close-modal" aria-label="Close">×</button>
+      <div id="modal-icon" class="modal-icon">💗</div>
+      <h2 id="modal-title">A little mystery...</h2>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+ 
+  <div id="toast" class="toast hidden"></div>
+  <script src="script.js"></script>
+</body>
+</html>
